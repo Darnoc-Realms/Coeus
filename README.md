@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Coeus.png" width="150" title="Logo" style="border-radius:50%">
+  <img src="assets/Coeus.png" width="150" title="Logo">
 </p>
 <h1 align="center">Coeus</h1>
 An ambitious **Discord** bot to manage new users, build a player database, and answer questions.
