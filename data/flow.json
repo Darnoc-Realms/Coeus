@@ -1,0 +1,223 @@
+[
+  {
+    "step": 0,
+    "description": "blank, needed to make array line up with steps"
+  },
+  {
+    "step": 1,
+    "description": "confirm offenses",
+    "trigger": "okay",
+    "message": {
+      "content": "Do you agree **not** to commit any of these offenses?\nType `yes` to continue.",
+      "embeds": [
+        {
+          "title": "Offenses",
+          "description": "> **Spamming** *including attention-stealing behavior, unnecessary profanity, unnecessary pings*\n\n>  **Trolling ** *including provoking & personal attacks*\n\n> **Disruptive/Pinging Advertising ** *ask @venashial#4654 first*\n\n> **Impersonation**\n\nYour first offense may be pardoned. You are allowed to avoid a consequence of an offense if you delete your message within 1 minute. Repeatedly deleting messages to evade a consequence will not be tolerated. \n\n**Any offense - 24 hour mute**",
+          "color": 14731552
+        }
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "description": "confirm infractions",
+    "trigger": "yes",
+    "message": {
+      "content": "Do you agree **not** to commit any of these infractions?\nType `yes` to continue.",
+      "embeds": [
+        {
+          "title": "Infractions",
+          "description": "> **Doxxing** *posting other user’s photos, locations, full names, age, or identifiable attributes*\n\n> **Toxicity** *discrimination, hate-speech, harassment* - Posting NSFW *including sexualized language or imagery*\n\n> **Hacking** *including hacked clients, x-ray texture packs, freecam mods*\n\n> **Lagging/Breaking the server**\n\n> **Griefing & Stealing** *including building in/on other player’s land*\n\n**1 infraction - 2 week ban\n2 infractions - Permanent ban**",
+          "color": 13700365
+        }
+      ]
+    }
+  },
+  {
+    "step": 3,
+    "description": "confirm catchall rules",
+    "trigger": "yes",
+    "message": {
+      "content": "Please read all the information regarding moderation below.\nType `okay` to continue.",
+      "embeds": [
+        {
+          "title": "Server Moderation",
+          "description": "**Moderation is subjective**\nAdministrators reserve the right to take action against people that try to bend or skirt the rules (that is to say, people that violate the spirit of the rules rather than the word). Administrators may also take stronger corrective actions towards people that have multiple offenses, regardless of their severity. We don’t intend to be unreasonable.\n\n**Bans CAN be appealed!**\nPost public appeals in the #bember-appeal channel and DM @venashial#4654 private appeals. You are free to collect evidence to prove your ban's illegitimacy. If your ban is regarding a specific interaction with someone, you can ask them if they believe the punishment is just and use that as evidence.",
+          "color": 1593599
+        }
+      ]
+    }
+  },
+  {
+    "step": 4,
+    "description": "confirm anti-cheat, blocklogging, and rollback",
+    "trigger": "okay",
+    "message": {
+      "content": "This server is protected by an anti-cheat mod, this server will log every block and item you touch, and it can rollback any griefing you cause.\n**If you want to cause trouble, this server isn't going to make it easy.**\nType `okay` to continue.",
+      "embeds": [
+        {
+          "title": "Server Protection",
+          "description": "**Built-in Anti-cheat**\nHackers will be automatically caught and banned\n\n**Block & Item Tracking**\nGriefers and thieves can be easily caught and will be banned. Any destruction they cause can be rolled back",
+          "color": "#FFFF00"
+        }
+      ]
+    }
+  },
+  {
+    "step": 5,
+    "description": "get minecraft username",
+    "trigger": "okay",
+    "message": {
+      "content": "What is your Minecraft username? Type just your in-game name with no spaces. Capitalization does matter.",
+      "embeds": null
+    }
+  },
+  {
+    "step": 6,
+    "description": "warn about future messages",
+    "trigger": null,
+    "message": {
+      "content": "Got it, I'll hold onto that! Let me fill you in on few things you should know about the server. You will have to go through each of my messages to join Darnoc Realms. (It shouldn't take long.)\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 7,
+    "description": "teach discord link",
+    "trigger": "okay",
+    "message": {
+      "content": "One of the most useful things on the Darnoc Realms Discord server is a channel named #ingame-chat that relays and sends all messages from the chat in-game on the Minecraft server. It also sends messages whenever players join or leave the Minecraft server! Mentions and images should work!\nType `okay` to continue",
+      "embeds": [
+        {
+          "title": "Example Image",
+          "image": "https://i.imgur.com/XLylbeK.png",
+          "color": 11513775
+        }
+      ]
+    }
+  },
+  {
+    "step": 8,
+    "description": "teach online map",
+    "trigger": "okay",
+    "message": {
+      "content": "Another useful feature on Darnoc Realms is the online map. It shows all of the chunks in the world that have been explored as well as player's live locations. \nType `okay` to continue",
+      "embeds": [
+        {
+          "title": "Open https://darnoc-realms.ml/map",
+          "link": "https://darnoc-realms.ml/map",
+          "image": "https://i.imgur.com/TtSFspe.png",
+          "color": "#e5b232"
+        }
+      ]
+    }
+  },
+  {
+    "step": 9,
+    "description": "teach farming village",
+    "trigger": "okay",
+    "message": {
+      "content": "When you join for the first time, you will spawn in the farming village instead of the world spawn. It contains a hospitable house by the river that is open to anyone to sleep in. Additionally, there are multiple farms that anyone can use. If you are unsure if a farm is public, look for signs and ask on Discord.\nType `okay` to continue",
+      "embeds": [
+        {
+          "title": "Farming Village Photo",
+          "image": "https://i.imgur.com/bvnJHrW.png",
+          "color": 11513775
+        }
+      ]
+    }
+  },
+  {
+    "step": 10,
+    "description": "teach community island",
+    "trigger": "okay",
+    "message": {
+      "content": "The actual world spawn is on a small island called \"Spawn Island\" at coordinates [-2728, 20]. That island is surrounded by a larger one called \"Community Island.\" Community Island is the place for everyone to meet, shop, and partake in events. No houses, bases, farms, or lag inducing redstone contraptions can be built on Community Island. The island is at the coordinates [-2800, 0] and is visible from Spawn Island. All shops should be built on Community Island unless the shop must be in a different location for it's purpose. Company/club headquarters can also be built on the community island.\nType `okay` to continue",
+      "embeds": [
+        {
+          "title": "Spawn/Community Island Photo",
+          "image": "https://i.imgur.com/dctl2hm.png",
+          "color": 11513775
+        }
+      ]
+    }
+  },
+  {
+    "step": 11,
+    "description": "teach private bases",
+    "trigger": "okay",
+    "message": {
+      "content": "After getting your footing, you may want to leave the farming village to build a base or house. It is reccommeded that you find a suitable spot on the online map (https://darnoc-realms.ml/map) and checking if other players are in the area before building. If another player has already started building nearby (within about 150 blocks) it is your responsibility to contact them to work out an agreement.\n\nWhile exploring the server you may come across another player's base or home. Treat that land as private and only go inside it with explicit permission. If you would like to allow anyone to enter your base, post a message in the #location-feed channel.\n\nType `okay` to continue",
+      "embeds": [
+        {
+          "title": "Venashial's Private Base",
+          "image": "https://i.imgur.com/5wPztEv.png",
+          "color": 11513775
+        }
+      ]
+    }
+  },
+  {
+    "step": 12,
+    "description": "teach block locking",
+    "trigger": "okay",
+    "message": {
+      "content": "This server has block locking so you can keep your most prized possessions safe!\n\nUse the `/htm set PRIVATE` command to lock a block.\nUse the `/htm set PUBLIC` command to make a block available to everyone but only destroyable and lockable by you.\nUse the `/htm info` command to check if a block is locked.\nUse the `/htm trust <PLAYER NAME HERE>` command to make a block that you set to PRIVATE available to a certain person.\n Use the `/htm remove` command to remove all the settings from a block.\n\nHere is a video where all the features are used, https://i.imgur.com/MPIt7Cw.mp4\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 13,
+    "description": "teach death chests",
+    "trigger": "okay",
+    "message": {
+      "content": "Death Chests!\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 14,
+    "description": "teach homes",
+    "trigger": "okay",
+    "message": {
+      "content": "Homes!\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 15,
+    "description": "teach tpa requests",
+    "trigger": "okay",
+    "message": {
+      "content": "Tpa requests!\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 16,
+    "description": "teach multiplayer sleep",
+    "trigger": "okay",
+    "message": {
+      "content": "On Darnoc Realms, once one player sleeps, the night is skipped for everyone! A message will be sent in the chat letting everyone know who slept. This is especially useful when some players are AFKing and you want to sleep.\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 17,
+    "description": "teach mob heads",
+    "trigger": "okay",
+    "message": {
+      "content": "Animals and mobs have a chance of dropping their head when they are killed. This chance is increased with the Looting enchantment. A sometimes up-to-date list of the drop rates can be found here, https://reddit.com/g1t9hj.\nType `okay` to continue",
+      "embeds": null
+    }
+  },
+  {
+    "step": 18,
+    "description": "start timer",
+    "trigger": "okay",
+    "message": {
+      "content": "Thanks for learning about Darnoc Realms! You'll be prepared when you first join. Now we have to wait 24 hours since when you joined the Discord server. After that, I'll make you a member and ping you to let you know. Also, I'll give you the server IP address and whitelist you. See you soon! (You can check how much time you have left by messaging me anything.)",
+      "embeds": null
+    }
+  }
+]
