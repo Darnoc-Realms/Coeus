@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/Coeus.png" width="150" title="Logo">
+  <img src="assets/Coeus.png" width="150" title="Logo" style="border-radius:50%">
 </p>
 <h1 align="center">Coeus</h1>
-An ambitious **Discord** bot to manage new users, build a player database, and answer questions
+An ambitious **Discord** bot to manage new users, build a player database, and answer questions.
 
 The project is split into three main parts. First, the bot teaches new players and obtains their data to join the server. Second, the bot answers players questions. Both parts are conducted over DMs but there are announcement messages in the server in a channel. Third, the
 
