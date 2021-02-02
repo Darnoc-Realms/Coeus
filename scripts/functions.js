@@ -1,3 +1,9 @@
+/*
+
+THIS WILL BECOME THE FUNCTIONS FILE CONTAINING FUNCTIONS TO BE USED BY MULTIPLE OTHER PARTS
+
+*/
+
 // get client from index
 const client = require('./index');
 

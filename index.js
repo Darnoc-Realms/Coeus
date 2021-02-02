@@ -1,3 +1,10 @@
+/*
+
+THIS WILL BECOME THE MAIN FILE
+starting discord bot, handle messages
+
+*/
+
 // require the discord.js module
 const Discord = require('discord.js');
 

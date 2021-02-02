@@ -5,7 +5,7 @@
 
 An ambitious **Discord** bot to manage new users, build a player database, and answer questions.
 
-The project is split into three main parts. First, the bot teaches new players and obtains their data to join the server. Second, the bot answers players questions. Both parts are conducted over DMs but there are announcement messages in the server in a channel. Third, the
+The project is split into three main parts. First, the bot teaches new players, obtains their data, and whitelists new players. Second, the bot answers players' questions. Both parts are conducted over DMs but there are announcement messages in the server in a channel. Third, the bot updates a member count and checks for changed Minecraft usernames.
 
 ## Feature list
 
