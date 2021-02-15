@@ -4,17 +4,17 @@ THIS WILL BECOME THE FUNCTIONS FILE CONTAINING FUNCTIONS TO BE USED BY MULTIPLE 
 
 */
 
-// get client from index
+// Get client from index
 const client = require('./index');
 
-// export functions
+// Export functions
 module.exports = { change_role };
 
-// changes role of user
+// Changes role of users
 async function change_role(member_id, role_id, should_have) {
-	// fetch a single role
+	// Fetch a single role
 	const role = await client.guilds.cache.get(guild_id).roles.fetch(role_id);
-	// fetch user
+	// Fetch user
 	const member = await client.guilds.cache.get(guild_id).members.fetch(member_id);
 
 	if (should_have) {
