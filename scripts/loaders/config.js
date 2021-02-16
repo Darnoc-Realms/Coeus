@@ -13,22 +13,30 @@ function check_config() {
 
 		// Config file is missing, create a new one and stop
 		const example_config = {
-			'prefix': '!',
-			'training': {
-			    'waiting_period_milliseconds': 60000,
+			prefix: '!',
+			guild_id: '',
+			bot_token: '',
+			channel_ids: {
+				member_count: '',
+				ingame_count: '',
+				user_log: '',
 			},
-			'guild_id': '',
-			'bot_token': '',
-			'channel_ids': {
-				'member_count': '',
-				'ingame_count': '',
-				'user_log': '',
+			roles: {
+				member: '',
 			},
-			'roles': {
-				'member': '',
+			data_files: {
+				players: '',
 			},
-			'data_files': {
-				'players': '',
+			URLs: {
+				dynmap_api: '',
+			},
+			training: {
+			    waiting_period: 60000,
+			},
+			refresh_speed: {
+				instant: 60000,
+				medium: 360000,
+				slow: 86400000,
 			},
 		};
 

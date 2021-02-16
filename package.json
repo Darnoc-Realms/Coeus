@@ -17,5 +17,5 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "repository": "https://github.com/Darnoc-Realms/Coeus.git",
-  "license": "None"
+  "license": "MIT"
 }

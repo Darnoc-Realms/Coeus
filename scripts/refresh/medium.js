@@ -1,11 +1,12 @@
+const {
+	guild_id, channel_ids, roles, URLs, refresh_speed,
+} = require(__dirname + '/../../config.json'); // Load config into variables
+
 // update channel counts
 const channel_counter = require(__dirname + '/../widgets/channel_counter');
 
-/*
-
-// update member count every 6 minutes
 client.setInterval(() => {
-	update_member_count();
-}, 360000);
-
-*/
+	// Update channel counters
+	channel_counter.members();
+	channel_counter.ingame();
+}, refresh_speed.medium);
