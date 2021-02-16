@@ -27,7 +27,7 @@
       "embeds": [
         {
           "title": "Infractions",
-          "description": "> **Doxxing** *posting other user’s photos, locations, full names, age, or identifiable attributes*\n\n> **Toxicity** *discrimination, hate-speech, harassment* - Posting NSFW *including sexualized language or imagery*\n\n> **Hacking** *including hacked clients, x-ray texture packs, freecam mods*\n\n> **Lagging/Breaking the server**\n\n> **Griefing & Stealing** *including building in/on other player’s land*\n\n**1 infraction - 2 week ban\n2 infractions - Permanent ban**",
+          "description": "> **Doxxing** *posting other user’s photos, locations, full names, age, or identifiable attributes*\n\n> **Toxicity** *discrimination, hate-speech, harassment*- Posting NSFW *including sexualized language or imagery*\n\n> **Hacking** *including hacked clients, x-ray texture packs, freecam mods*\n\n> **Lagging/Breaking the server**\n\n> **Griefing & Stealing** *including building in/on other player’s land*\n\n**1 infraction - 2 week ban\n2 infractions - Permanent ban**",
           "color": 13700365
         }
       ]
@@ -50,7 +50,7 @@
   },
   {
     "step": 4,
-    "description": "confirm anti-cheat, blocklogging, and rollback",
+    "description": "confirm anti-cheat, block logging, and rollback",
     "trigger": "okay",
     "message": {
       "content": "This server is protected by an anti-cheat mod, this server will log every block and item you touch, and it can rollback any griefing you cause.\n**If you want to cause trouble, this server isn't going to make it easy.**\nType `okay` to continue.",
@@ -147,7 +147,7 @@
     "description": "teach private bases",
     "trigger": "okay",
     "message": {
-      "content": "After getting your footing, you may want to leave the farming village to build a base or house. It is reccommeded that you find a suitable spot on the online map (https://darnoc-realms.ml/map) and checking if other players are in the area before building. If another player has already started building nearby (within about 150 blocks) it is your responsibility to contact them to work out an agreement.\n\nWhile exploring the server you may come across another player's base or home. Treat that land as private and only go inside it with explicit permission. If you would like to allow anyone to enter your base, post a message in the #location-feed channel.\n\nType `okay` to continue",
+      "content": "After getting your footing, you may want to leave the farming village to build a base or house. It is recommended that you find a suitable spot on the online map (https://darnoc-realms.ml/map) and checking if other players are in the area before building. If another player has already started building nearby (within about 150 blocks) it is your responsibility to contact them to work out an agreement.\n\nWhile exploring the server you may come across another player's base or home. Treat that land as private and only go inside it with explicit permission. If you would like to allow anyone to enter your base, post a message in the #location-feed channel.\n\nType `okay` to continue",
       "embeds": [
         {
           "title": "Venashial's Private Base",

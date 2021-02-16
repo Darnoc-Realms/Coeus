@@ -1,9 +1,4 @@
-/*
-
-THIS WILL BECOME THE NEW USER DM PARSING AND RESPONSE FILE
-
-*/
-
+// TODO: THIS WILL BECOME THE NEW USER DM PARSING AND RESPONSE FILE
 
 // Require the discord.js module
 const Discord = require('discord.js');
@@ -18,7 +13,7 @@ const axios = require('axios');
 const client = new Discord.Client();
 
 // Import config.json
-const
+const {
 	prefix, guild_id, channel_ids, roles, data_files, waiting_period_milliseconds, bot_token,
 } = require('./config.json');
 

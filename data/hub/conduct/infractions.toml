@@ -1,0 +1,28 @@
+[meta]
+title="Infractions"
+desc="List of infractions and consequences"
+
+[triggers]
+double=[["what","infractions"],["infractions", "consequences"],["rules","infractions"]]
+fallback=["infractions"]
+
+[message]
+text="These are the infractions and their consequences"
+images=[]
+
+# Possible embed properties: header_text, header_url, header_img
+[[message.embeds]]
+title="Title!"
+body="Called description internally"
+url="https://..."
+color="#eb4034"
+
+  [[message.embeds.header]]
+  header_text="Called author internally"
+  header_url="https://..."
+  header_img="https://..."
+
+  [[message.embeds.fields]]
+  title="Called field name internally"
+  body="Called field value internally"
+  inline=false

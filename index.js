@@ -1,24 +1,50 @@
-/*
-
-THIS WILL BECOME THE MAIN FILE
-starting discord bot, handle messages
-
-*/
-
-// require the discord.js module
-const Discord = require('discord.js');
-
 // fs & path
 const fs = require('fs');
+
+// Configuration checker
+const { check_config } = require('./scripts/loaders/config');
+if (check_config() == false) {
+	process.kill(process.pid, 'SIGTERM'); // Kill process because config.json does not exist
+}
+// Load config into variables
+const {
+	prefix, guild_id, channel_ids, roles, data_files, waiting_period_milliseconds, bot_token,
+} = require('./config.json');
+
 
 // axios for http requests
 const axios = require('axios');
 
+// require the discord.js module
+const Discord = require('discord.js');
+
 // create a new Discord client
 const client = new Discord.Client();
+module.exports = { client };
 
-// import config.json
-const { prefix, guild_id, channel_ids, roles, data_files, waiting_period_milliseconds } = require('./config.json');
+// Login bot with token
+client.login(bot_token);
+
+const channel_counter = require('./scripts/widgets/channel_counter');
+
+// Refresh scripts
+require('./scripts/refresh/instant');
+require('./scripts/refresh/medium');
+require('./scripts/refresh/slow');
+
+
+// when the client is ready
+client.once('ready', () => {
+	console.log('Ready to start welcoming members!');
+	client.user.setActivity('for new members', { type: 'WATCHING' });
+	client.user.setStatus('online');
+
+	// Update channel counters
+	channel_counter.members();
+	channel_counter.ingame();
+});
+
+/*
 
 // import external functions
 const { change_role } = require('./functions');
@@ -26,10 +52,6 @@ const { change_role } = require('./functions');
 // import flow (direct messages) data
 const flow = require('./data/flow.json');
 
-// get token from .env and login
-const dotenv = require('dotenv');
-dotenv.config();
-client.login(process.env.TOKEN);
 
 // make sure player's file isn't empty because weird errors will happen
 fs.readFile(data_files.players, (err, data) => {
@@ -41,15 +63,6 @@ fs.readFile(data_files.players, (err, data) => {
 	}
 });
 
-// when the client is ready
-client.once('ready', () => {
-	console.log('Ready to start welcoming members!');
-
-	update_member_count();
-
-	client.user.setActivity('for new members', { type: 'WATCHING' });
-	client.user.setStatus('online');
-});
 
 // on message sent
 client.on('message', message => {
@@ -141,59 +154,6 @@ client.on('message', message => {
 		});
 	}
 });
-
-// check for players that have become members after waiting every 1 minute
-client.setInterval(() => {
-	fs.readFile(data_files.players, (err, data) => {
-		data = JSON.parse(data);
-		// const pos = data.map(function(e) { return e.discord_id; }).indexOf(message.author.id);
-		// loop through each player
-		data.forEach(function(player, index) {
-			// check is player is not a member already, on the last step of flow, is not banned, and has waited long enough
-			if (player.member_date == '' && player.tutorial_progress == flow.length - 1 && player.banned == null && waiting_period_milliseconds - (Date.now() - player.join_date < 0)) {
-				// add member role
-				change_role(player.discord_id, roles.member, true);
-
-				// assign timestamp to when became member
-				data[index].member_date = Date.now();
-
-				// fetch member so it can use their picture
-				client.guilds.cache.get(guild_id).members.fetch(player.discord_id)
-					.then(member => {
-						// send annoucement
-						const message_embed = new Discord.MessageEmbed()
-							.setColor('#363fed')
-							.setAuthor(`Congrats ${member.displayName}`, member.user.displayAvatarURL())
-							.setFooter(`You are now a member after waiting ${timeConversion(waiting_period_milliseconds)}`)
-							.setTimestamp();
-
-						client.guilds.cache.get(guild_id).channels.cache.get(channel_ids.user_log).send(message_embed);
-					});
-
-				// write changes to players database
-				fs.writeFile(data_files.players, JSON.stringify(data, null, 2), function writeJSON(err) { if (err) return console.log(err); });
-			}
-		});
-	});
-}, 10000);
-
-// update member count every 6 minutes
-client.setInterval(() => {
-	update_member_count();
-}, 360000);
-
-// gets members of guild and updates member count channel name
-async function update_member_count() {
-	await client.guilds.cache.get(guild_id).members.fetch();
-	const member_count = client.guilds.cache.get(guild_id).roles.cache.get(roles.member).members.size;
-	client.channels.fetch(channel_ids.member_count)
-		.then(channel => channel.setName(`Members: ${member_count}`));
-}
-
-// check for mc username changes and change nicknames
-client.setInterval(() => {
-	console.log('Would be checking mojang api');
-}, waiting_period_milliseconds);
 
 client.on('guildMemberAdd', member => {
 	fs.readFile(data_files.players, (err, data) => {
@@ -331,3 +291,4 @@ function timeConversion(millisec) {
 		return (days + ' days').replace(/\.0/, '');
 	}
 }
+*/
