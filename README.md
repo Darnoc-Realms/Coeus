@@ -52,6 +52,12 @@ Run the command below to start the bot
 yarn run start
 ```
 
+or 
+
+```zsh
+npm run start
+```
+
 ## Source Code
 
 This project is licensed under the MIT license
